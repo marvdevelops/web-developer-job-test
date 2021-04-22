@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Tech - Developer Test</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main-style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <figure class="zoom featured-image" onmousemove="zoom(event)" style="background-image: url(images/coffee-anais.jpg);">
+                    <img src="images/coffee-anais.jpg" alt="Coffee Anais" />
+                    <a href="#light">
+                        <span class="lightbox-btn"></span>
+                    </a>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <h2>Anais Reserve Lots For Espresso & Milk Coffee</h2>
+                <h1>AICA 2020 Gold Award Winning Coffee</h1>
+                <img src="images/aica-gold-2020-200x200.jpg" alt="AICA Gold 2020" title="AICA Gold 2020" />
+                <h3>Espresso GOLD MEDAL WINNER 2020</h3>
+                
+                <form id="cart-form" method="POST" action="#">
+	                <div class="size-group">
+	                    <span>Size</span>
+	                    <div class="size-field">
+	                        <input type="radio" id="radio-1kg" name="switch-size" value="1kg" checked />
+	                        <label for="radio-1kg">1kg</label>
+	                        <input type="radio" id="radio-2kg" name="switch-size" value="2kg" />
+	                        <label for="radio-2kg">2kg</label>
+	                        <input type="radio" id="radio-3kg" name="switch-size" value="3kg" />
+	                        <label for="radio-3kg">3kg</label>
+	                        <input type="radio" id="radio-200g" name="switch-size" value="200g" />
+	                        <label for="radio-200g">200g</label>
+	                    </div>
+	                    <hr class="spacer">
+	                    <div class="price-info">
+	                        <strong class="price">NZD12.90</strong>+ GST, inc GST is NZD14.84
+	                    </div>
+	                    <section id="AddToCartBlock">
+	                        <span id="priceATC" class="quantity-up-down">
+	                            <label>Quantity</label>
+	                            <span class="icon-minus-squared off">&ndash;</span>
+	                            <input name="quantity" type="number" value="1" id="Quantity" class="qty-field" min="1" max="20">
+	                            <span class="icon-plus-squared">+</span>
+	                        </span>
+	                        <button type="submit" form="cart-form" id="AddToCartButton" class="add-to-cart">Add to Cart</button>
+	                    </section>
+	                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="lightbox" id="light">
+        <span style="background-image: url('images/coffee-anais.jpg')"></span>
+    </a>
+
+    <div id="info-box">
+    	<p>Added to cart!</p>
+		<div class="product-image">
+			<img src="images/coffee-anais.jpg" class="img-fluid" alt="Coffee Anais">
+		</div>
+		<br>
+		<p class="product-name">Coffee Anais</h2>
+		<p class="product-quality">Espresso GOLD MEDAL WINNER 2020</h2>
+		<p class="product-price">Price : NZD12.90</p>
+		<p class="total-price"></p>
+
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/main-js.js"></script>
+</body>
+
+</html>

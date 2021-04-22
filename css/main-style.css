@@ -1,0 +1,250 @@
+/* Author: Marv */
+
+
+h1,
+h2,
+h3 {
+    padding: 20px 0;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+#info-box{
+	display: none;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #327fc3;
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px;
+}
+
+/*** image zoom ***/
+figure.zoom {
+    background-position: 50% 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+figure.zoom img:hover {
+    opacity: 0;
+}
+
+figure.zoom img {
+    transition: opacity 0.5s;
+    display: block;
+    width: 100%;
+}
+
+.lightbox-btn {
+    background: url(../graphics/zoomin.png) no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+hr.spacer {
+    margin: 50px 0;
+}
+
+strong {
+    color: #ee4b69;
+}
+
+
+.price-info {
+    margin-bottom: 20px;
+}
+
+/** Beautify Radio Buttons **/
+
+.size-group {
+    margin-top: 30px;
+}
+
+.size-field {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+}
+
+.size-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.size-field label {
+    color: #e8e8e8;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border: 2px solid #e8e8e8;
+    transition: all 0.1s ease-in-out;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.size-field label:hover {
+    cursor: pointer;
+}
+
+.size-field input:checked+label {
+    border: 2px solid #327fc3;
+    color: #327fc3;
+}
+
+/** Lightbox **/
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: zoom-out;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+.lightbox span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/** Quantity Block / Add To Cart **/
+
+/*CSS for incrementors begins*/
+[id=priceATC] {
+    float: left;
+    clear: left;
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+
+input[type=number] {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    outline: 0;
+    height: 32px;
+    width: 3em;
+    text-align: center;
+    border: 2px solid #e1e1e1;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.add-to-cart {
+    margin-top: -2px;
+    margin-left: 6px;
+    float: left;
+    display: inline-block;
+    background: #000;
+    border-radius: 3px;
+    border: 0;
+    white-space: nowrap;
+    padding: 0px 15px;
+    overflow: visible;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+    text-indent: 0 !important;
+    text-shadow: none;
+    text-align: center !important;
+    color: #fff;
+    text-decoration: none !important;
+    -webkit-appearance: none;
+}
+
+.add-to-cart:hover{
+	background: #ccc;
+	color: #000;
+}
+
+.icon-minus-squared,
+.icon-plus-squared {
+    width: 33px;
+    display: inline-block;
+    border-radius: 6px;
+    color: #327fc3;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border: 2px solid #327fc3;
+}
+
+.off {
+    cursor: default;
+    opacity: .3;
+}
+
+.error {
+    float: left;
+    clear: left;
+}
+
+
+/** Mobile breakpoints **/
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  	#info-box{
+		display: none;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    background: #327fc3;
+	    font-size: 1rem;
+	    color: #fff;
+	    padding: 20px;
+	}
+
+}
